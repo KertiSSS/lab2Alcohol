@@ -29,55 +29,31 @@
         private void InitializeComponent()
         {
             button1 = new Button();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
             textBox7 = new TextBox();
-            textBox5 = new TextBox();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
             textBox1 = new TextBox();
-            button2 = new Button();
+            comboBox1 = new ComboBox();
+            comboBox2 = new ComboBox();
+            label5 = new Label();
+            label6 = new Label();
+            label7 = new Label();
+            label8 = new Label();
             SuspendLayout();
             // 
             // button1
             // 
             button1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button1.Location = new Point(876, 315);
+            button1.Location = new Point(874, 444);
             button1.Margin = new Padding(4, 3, 4, 3);
             button1.Name = "button1";
             button1.Size = new Size(144, 120);
             button1.TabIndex = 0;
-            button1.Text = "Całkowita objętość napoju";
+            button1.Text = "Wynik";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += Całkowitaobjętośćnapoju_Click;
-            // 
-            // textBox2
-            // 
-            textBox2.BackColor = Color.DarkGray;
-            textBox2.BorderStyle = BorderStyle.FixedSingle;
-            textBox2.Location = new Point(14, 136);
-            textBox2.Margin = new Padding(4, 3, 4, 3);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(152, 56);
-            textBox2.TabIndex = 3;
-            textBox2.TextAlign = HorizontalAlignment.Center;
-            textBox2.TextChanged += textBox2_TextChanged;
-            // 
-            // textBox3
-            // 
-            textBox3.BackColor = Color.DarkGray;
-            textBox3.BorderStyle = BorderStyle.FixedSingle;
-            textBox3.Location = new Point(191, 136);
-            textBox3.Margin = new Padding(4, 3, 4, 3);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(239, 56);
-            textBox3.TabIndex = 5;
-            textBox3.TextAlign = HorizontalAlignment.Center;
-            textBox3.TextChanged += textBox3_TextChanged;
+            button1.Click += Wynik_Click;
             // 
             // textBox7
             // 
@@ -86,7 +62,7 @@
             textBox7.BorderStyle = BorderStyle.FixedSingle;
             textBox7.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
             textBox7.ForeColor = Color.Black;
-            textBox7.Location = new Point(456, 85);
+            textBox7.Location = new Point(481, 93);
             textBox7.Margin = new Padding(4, 3, 4, 3);
             textBox7.Name = "textBox7";
             textBox7.Size = new Size(0, 22);
@@ -95,24 +71,11 @@
             textBox7.Text = "Количество сосудов";
             textBox7.TextAlign = HorizontalAlignment.Center;
             // 
-            // textBox5
-            // 
-            textBox5.BackColor = Color.DarkGray;
-            textBox5.BorderStyle = BorderStyle.FixedSingle;
-            textBox5.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            textBox5.Location = new Point(664, 83);
-            textBox5.Margin = new Padding(4, 3, 4, 3);
-            textBox5.Multiline = true;
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(356, 25);
-            textBox5.TabIndex = 11;
-            textBox5.TextAlign = HorizontalAlignment.Center;
-            // 
             // label1
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Location = new Point(16, 83);
+            label1.Location = new Point(12, 96);
             label1.Name = "label1";
             label1.Size = new Size(109, 15);
             label1.TabIndex = 14;
@@ -123,7 +86,7 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Location = new Point(191, 85);
+            label2.Location = new Point(191, 96);
             label2.Name = "label2";
             label2.Size = new Size(226, 15);
             label2.TabIndex = 15;
@@ -134,11 +97,11 @@
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
-            label3.Location = new Point(456, 83);
+            label3.Location = new Point(481, 96);
             label3.Name = "label3";
-            label3.Size = new Size(84, 15);
+            label3.Size = new Size(86, 15);
             label3.TabIndex = 16;
-            label3.Text = "Liczba statków";
+            label3.Text = "Liczba drinków";
             label3.Click += label3_Click;
             // 
             // label4
@@ -154,42 +117,90 @@
             // 
             // textBox1
             // 
-            textBox1.BackColor = Color.DarkGray;
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.Location = new Point(456, 136);
+            textBox1.BackColor = Color.White;
+            textBox1.Location = new Point(483, 155);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(152, 56);
+            textBox1.Size = new Size(84, 25);
             textBox1.TabIndex = 18;
             textBox1.TextAlign = HorizontalAlignment.Center;
             textBox1.TextChanged += textBox1_TextChanged_1;
             // 
-            // button2
+            // comboBox1
             // 
-            button2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            button2.Location = new Point(874, 444);
-            button2.Margin = new Padding(4, 3, 4, 3);
-            button2.Name = "button2";
-            button2.Size = new Size(144, 120);
-            button2.TabIndex = 19;
-            button2.Text = "Objętość czystego alkoholu";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += Objętośćczystegoalkoholu_Click;
+            comboBox1.BackColor = Color.White;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(12, 157);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(109, 23);
+            comboBox1.TabIndex = 20;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
+            // comboBox2
+            // 
+            comboBox2.BackColor = Color.White;
+            comboBox2.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Location = new Point(191, 153);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(226, 25);
+            comboBox2.TabIndex = 21;
+            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(638, 96);
+            label5.Name = "label5";
+            label5.Size = new Size(147, 15);
+            label5.TabIndex = 22;
+            label5.Text = "Całkowita objętość napoju";
+            label5.Click += label5_Click;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(638, 155);
+            label6.Name = "label6";
+            label6.Size = new Size(152, 15);
+            label6.TabIndex = 23;
+            label6.Text = "Objętość czystego alkoholu";
+            label6.Click += label6_Click;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(874, 96);
+            label7.Name = "label7";
+            label7.Size = new Size(0, 15);
+            label7.TabIndex = 24;
+            label7.Click += label7_Click;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(874, 155);
+            label8.Name = "label8";
+            label8.Size = new Size(0, 15);
+            label8.TabIndex = 25;
+            label8.Click += label8_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1031, 576);
-            Controls.Add(button2);
+            Controls.Add(label8);
+            Controls.Add(label7);
+            Controls.Add(label6);
+            Controls.Add(label5);
+            Controls.Add(comboBox2);
+            Controls.Add(comboBox1);
             Controls.Add(textBox1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox3);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(textBox5);
             Controls.Add(textBox7);
             Controls.Add(button1);
             Margin = new Padding(4, 3, 4, 3);
@@ -203,16 +214,18 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox5;
         private Label label1;
         private Label label2;
         private Label label3;
         private Label label4;
         private TextBox textBox1;
-        private Button button2;
+        private ComboBox comboBox1;
+        public ComboBox comboBox2;
+        private Label label5;
+        private Label label6;
+        private Label label7;
+        private Label label8;
     }
 }
 

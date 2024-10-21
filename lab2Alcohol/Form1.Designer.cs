@@ -177,7 +177,8 @@
             Controls.Add(button1);
             Margin = new Padding(4, 3, 4, 3);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Alcohol Content Calculator";
+            Load += new System.EventHandler(this.Form1_Load);
             ResumeLayout(false);
             PerformLayout();
         }

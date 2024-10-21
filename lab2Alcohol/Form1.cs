@@ -49,12 +49,45 @@ namespace lab2Alcohol
 
             int vesselCount = int.Parse(textBox1.Text);
 
+            if (!naczynia.TryGetValue(comboBox1.Text, out vesselVolume))
+            {
+                if (!double.TryParse(comboBox1.Text, out vesselVolume))
+                {
+                    MessageBox.Show("Nieprawidłowa objętość naczynia! Wprowadź wartość liczbową lub wybierz z listy.");
+                    return;
+                }
+            }
+
+            if (!napoje.TryGetValue(comboBox2.Text, out alcoholPercentage))
+            {
+                if (!double.TryParse(comboBox2.Text, out alcoholPercentage))
+                {
+                    MessageBox.Show("Nieprawidłowa zawartość procentowa alkoholu! Wprowadź wartość liczbową lub wybierz z listy.");
+                    return;
+                }
+            }
+
             double totalVolume = vesselVolume * vesselCount;
 
             double pureAlcoholVolume = totalVolume * (alcoholPercentage / 100);
 
             label7.Text = totalVolume.ToString("F2") + " ml";
             label8.Text = pureAlcoholVolume.ToString("F2") + " ml";
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            foreach (var item in naczynia.Keys)
+            {
+                comboBox1.Items.Add(item);
+            }
+
+            foreach (var item in napoje.Keys)
+            {
+                comboBox2.Items.Add(item);
+            }
+
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDown;
+            comboBox2.DropDownStyle = ComboBoxStyle.DropDown;
         }
     }
 }

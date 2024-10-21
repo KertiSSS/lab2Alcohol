@@ -12,7 +12,7 @@ namespace lab2Alcohol
 {
     public partial class Form1 : Form
     {
-        private Dictionary<string, double> pojemniki = new Dictionary<string, double>
+        private Dictionary<string, double> naczynia = new Dictionary<string, double>
         {
             { "Kieliszek 25 ml", 25 },
             { "Kieliszek 50 ml", 50 },
@@ -44,72 +44,17 @@ namespace lab2Alcohol
 
         private void Wynik_Click(object sender, EventArgs e)
         {
+            double vesselVolume;
+            double alcoholPercentage;
 
-        }
+            int vesselCount = int.Parse(textBox1.Text);
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
+            double totalVolume = vesselVolume * vesselCount;
 
-        }
+            double pureAlcoholVolume = totalVolume * (alcoholPercentage / 100);
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
+            label7.Text = totalVolume.ToString("F2") + " ml";
+            label8.Text = pureAlcoholVolume.ToString("F2") + " ml";
         }
     }
 }

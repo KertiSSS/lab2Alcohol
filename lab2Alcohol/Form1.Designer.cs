@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             button1 = new Button();
-            textBox7 = new TextBox();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -55,22 +54,6 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += Wynik_Click;
             // 
-            // textBox7
-            // 
-            textBox7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            textBox7.BackColor = Color.Gray;
-            textBox7.BorderStyle = BorderStyle.FixedSingle;
-            textBox7.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 204);
-            textBox7.ForeColor = Color.Black;
-            textBox7.Location = new Point(481, 93);
-            textBox7.Margin = new Padding(4, 3, 4, 3);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(0, 22);
-            textBox7.TabIndex = 8;
-            textBox7.Tag = "";
-            textBox7.Text = "Количество сосудов";
-            textBox7.TextAlign = HorizontalAlignment.Center;
-            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -80,7 +63,6 @@
             label1.Size = new Size(109, 15);
             label1.TabIndex = 14;
             label1.Text = "Rozmiar pojemnika";
-            label1.Click += label1_Click;
             // 
             // label2
             // 
@@ -91,7 +73,6 @@
             label2.Size = new Size(226, 15);
             label2.TabIndex = 15;
             label2.Text = "Procentowa zawartość alkoholu w napoju";
-            label2.Click += label2_Click;
             // 
             // label3
             // 
@@ -102,7 +83,6 @@
             label3.Size = new Size(86, 15);
             label3.TabIndex = 16;
             label3.Text = "Liczba drinków";
-            label3.Click += label3_Click;
             // 
             // label4
             // 
@@ -124,7 +104,6 @@
             textBox1.Size = new Size(84, 25);
             textBox1.TabIndex = 18;
             textBox1.TextAlign = HorizontalAlignment.Center;
-            textBox1.TextChanged += textBox1_TextChanged_1;
             // 
             // comboBox1
             // 
@@ -134,7 +113,6 @@
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(109, 23);
             comboBox1.TabIndex = 20;
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // comboBox2
             // 
@@ -145,7 +123,6 @@
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(226, 25);
             comboBox2.TabIndex = 21;
-            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
             // 
             // label5
             // 
@@ -155,7 +132,6 @@
             label5.Size = new Size(147, 15);
             label5.TabIndex = 22;
             label5.Text = "Całkowita objętość napoju";
-            label5.Click += label5_Click;
             // 
             // label6
             // 
@@ -165,7 +141,6 @@
             label6.Size = new Size(152, 15);
             label6.TabIndex = 23;
             label6.Text = "Objętość czystego alkoholu";
-            label6.Click += label6_Click;
             // 
             // label7
             // 
@@ -174,7 +149,6 @@
             label7.Name = "label7";
             label7.Size = new Size(0, 15);
             label7.TabIndex = 24;
-            label7.Click += label7_Click;
             // 
             // label8
             // 
@@ -183,7 +157,6 @@
             label8.Name = "label8";
             label8.Size = new Size(0, 15);
             label8.TabIndex = 25;
-            label8.Click += label8_Click;
             // 
             // Form1
             // 
@@ -201,12 +174,10 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(textBox7);
             Controls.Add(button1);
             Margin = new Padding(4, 3, 4, 3);
             Name = "Form1";
             Text = "Form1";
-            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
